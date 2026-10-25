@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+/* Design tokens taken from the Figma home page (Final) */
+:root {
+  --ink: #111827;
+  --body: #555e68;
+  --gold: #9e7412;
+  --gold-light: #e8ca65;
+  --gold-number: #c59b27;
+  --navy: #071a2e;
+  --navy-surface: #0b1f3a;
+  --slate: #94a3b8;
+  --mist: #cbd5e1;
+  --pearl: #f7f5f0;
+  --blue: #0b4a9e;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--pearl);
+  color: var(--ink);
+  font-family: var(--font-alexandria), var(--font-inter), system-ui, sans-serif;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
