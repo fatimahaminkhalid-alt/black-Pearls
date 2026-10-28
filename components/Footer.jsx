@@ -1,9 +1,14 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { getDictionary } from "@/lib/i18n";
 import { localizePath } from "@/lib/i18n/config";
 import { assetPath } from "@/lib/assetPath";
 
 export default function Footer({ locale = "ar" }) {
+  const pathname = usePathname();
+  locale = pathname === "/en" || pathname.startsWith("/en/") ? "en" : locale;
   const t = getDictionary(locale).footer;
   const href = (p) => localizePath(locale, p);
 

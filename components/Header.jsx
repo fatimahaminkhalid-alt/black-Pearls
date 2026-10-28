@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import LanguageSwitch from "@/components/LanguageSwitch";
 import { getDictionary } from "@/lib/i18n";
 import { localizePath } from "@/lib/i18n/config";
@@ -7,6 +10,8 @@ import { assetPath } from "@/lib/assetPath";
 // Placed in frame units on the 1440-wide hero frame (see app/globals.css → "Hero frame").
 // Coordinates are measured from the inline-start edge, so they mirror between Arabic (RTL) and English (LTR).
 export default function Header({ locale = "ar" }) {
+  const pathname = usePathname();
+  locale = pathname === "/en" || pathname.startsWith("/en/") ? "en" : locale;
   const t = getDictionary(locale).nav;
   const href = (p) => localizePath(locale, p);
 

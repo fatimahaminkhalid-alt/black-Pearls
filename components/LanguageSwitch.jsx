@@ -3,6 +3,7 @@
 import { usePathname } from "next/navigation";
 import { switchLocalePath } from "@/lib/i18n/config";
 import { useI18n } from "@/components/I18nProvider";
+import { assetPath } from "@/lib/assetPath";
 
 // Links to the same page in the other language ("/about" ⇄ "/en/about").
 // A plain <a> (full page load) on purpose: the language changes <html lang/dir> and the layout.
@@ -13,7 +14,7 @@ export default function LanguageSwitch() {
 
   return (
     <a
-      href={switchLocalePath(pathname, other)}
+      href={assetPath(switchLocalePath(pathname, other))}
       hrefLang={other}
       lang={other}
       aria-label={t.nav.switchAria}
