@@ -32,7 +32,7 @@ export default function Header({ locale = "ar" }) {
       </nav>
 
       <div className="bp-header-actions">
-        <LanguageSwitch />
+        <LanguageSwitch locale={locale} />
         <Link href={href("/contact")} className="bp-pill bp-pill--light bp-header-cta" data-enter="cta">
           {t.cta}
         </Link>
