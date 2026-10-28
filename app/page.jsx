@@ -1,15 +1,22 @@
 import Hero from "@/components/Hero";
 import { About, Domains, Method, WhyUs, CallToAction } from "@/components/home/HomeSections";
+import { getLocale, pageMetadata } from "@/lib/i18n/server";
 
-export default function HomePage() {
+export async function generateMetadata() {
+  return pageMetadata("home", "/");
+}
+
+export default async function HomePage() {
+  const locale = await getLocale();
+
   return (
     <>
       <Hero />
-      <About />
-      <Domains />
+      <About locale={locale} />
+      <Domains locale={locale} />
       <Method />
-      <WhyUs />
-      <CallToAction />
+      <WhyUs locale={locale} />
+      <CallToAction locale={locale} />
     </>
   );
 }
