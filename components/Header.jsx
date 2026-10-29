@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import LanguageSwitch from "@/components/LanguageSwitch";
+import MobileMenu from "@/components/MobileMenu";
 import { getDictionary } from "@/lib/i18n";
 import { localizePath } from "@/lib/i18n/config";
 import { assetPath } from "@/lib/assetPath";
@@ -37,6 +38,7 @@ export default function Header({ locale = "ar" }) {
           {t.cta}
         </Link>
       </div>
+      <MobileMenu locale={locale} />
     </header>
   );
 }
