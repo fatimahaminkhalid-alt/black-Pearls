@@ -848,3 +848,16 @@ html.lenis {
   padding-block: 0.28em;
   margin-block: -0.28em;
 }
+
+/* ---------- Tablet landscape / small laptops (821–1365px) ---------- */
+@media (min-width: 821px) and (max-width: 1365px) {
+  .bp-nav-pill { gap: calc(36 * var(--u)); }
+  .bp-nav-pill a { font-size: max(calc(19.5 * var(--u)), 13px); }
+  .bp-lang { font-size: max(calc(16.5 * var(--u)), 13px); }
+  .bp-stat__label-lg { font-size: max(calc(20 * var(--u)), 14px); }
+  .bp-stat__label { font-size: max(calc(12 * var(--u)), 11px); }
+}
+/* the subline needs a little more room before it can grow */
+@media (min-width: 900px) and (max-width: 1365px) {
+  .bp-sub { font-size: max(calc(21.2 * var(--u)), 14px); }
+}
