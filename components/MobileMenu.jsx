@@ -4,16 +4,17 @@ import { useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { localizePath, stripLocale } from "@/lib/i18n/config";
-import { useI18n } from "@/components/I18nProvider";
 import LanguageSwitch from "@/components/LanguageSwitch";
+import { getDictionary } from "@/lib/i18n";
+import { assetPath } from "@/lib/assetPath";
 
 // Phone navigation (≤ 820px). The desktop pill menu is hidden on phones, so this button
 // opens a full-screen panel with the page links, the "Become a Partner" button and the
 // language switch. Native <dialog>: focus stays inside, Esc closes it.
-export default function MobileMenu() {
-  const { locale, t } = useI18n();
-  const nav = t.nav;
+export default function MobileMenu({ locale: localeProp = "ar" }) {
   const pathname = usePathname();
+  const locale = pathname === "/en" || pathname.startsWith("/en/") ? "en" : localeProp;
+  const nav = getDictionary(locale).nav;
   const current = stripLocale(pathname || "/");
   const ref = useRef(null);
 
@@ -47,7 +48,7 @@ export default function MobileMenu() {
       <dialog ref={ref} data-lenis-prevent aria-label={nav.menuAria} onClose={() => window.__lenis?.start()} className="bp-menu">
         <div className="bp-menu__top">
           <Link href={localizePath(locale, "/")} aria-label={nav.homeAria} className="bp-menu__logo" onClick={close}>
-            <img src="/logo.png" alt={nav.logoAlt} />
+            <img src={assetPath("/logo.png")} alt={nav.logoAlt} />
           </Link>
           <button type="button" onClick={close} aria-label={nav.menuClose} className="bp-menu__close">
             <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round">
@@ -76,7 +77,7 @@ export default function MobileMenu() {
           <Link href={localizePath(locale, "/contact")} className="bp-pill bp-pill--light bp-menu__cta" onClick={close}>
             {nav.cta}
           </Link>
-          <LanguageSwitch />
+          <LanguageSwitch locale={locale} />
         </div>
       </dialog>
     </>
