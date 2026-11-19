@@ -36,7 +36,6 @@ export default function AboutHero() {
         data-enter="kicker"
         className="inline-flex items-center gap-2.5 rounded-full border border-[#bb9a5a]/35 bg-[#112240]/85 px-[17px] py-[7px] text-[12px] font-bold leading-4 tracking-[0.3px] text-[#bb9a5a] backdrop-blur-[6px]"
       >
-        <span aria-hidden="true" className="size-3 rounded-full bg-[#c59b27]" />
         {t.badge}
       </p>
 

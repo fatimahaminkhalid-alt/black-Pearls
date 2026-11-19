@@ -31,10 +31,10 @@ export function About({ locale = "ar" }) {
           </span>
         </p>
         <p className="mt-6 max-w-[520px] text-[14px] leading-[1.8] text-[#555e68]">{t.body}</p>
+        <p className="mt-6 max-w-[520px] text-[16px] leading-[1.8] text-[#555e68]">{t.intro}</p>
       </div>
 
       <div className="flex flex-col gap-6">
-        <p className="text-[16px] leading-[1.8] text-[#555e68]">{t.intro}</p>
         <div className="relative isolate overflow-hidden rounded-xl bg-[#071a2e] p-8 pb-40 text-[#f7f5f0]">
           <img
             src={assetPath("/vision-2030.jpg")}

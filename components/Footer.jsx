@@ -30,7 +30,7 @@ export default function Footer({ locale = "ar" }) {
           <p className="mb-4 text-[14px] font-bold text-white">{t.contactTitle}</p>
           <ul className="space-y-3 text-[12px]">
             <li>
-              {t.crLabel} <span className="text-[#e8ca65]">{t.toBeAdded}</span>
+              {t.crLabel} <span className="text-[#e8ca65]">{t.crNumber}</span>
             </li>
             <li>
               {t.emailLabel}{" "}
