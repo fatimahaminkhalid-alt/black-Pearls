@@ -33,7 +33,6 @@ export default function EcosystemHero() {
         data-enter="kicker"
         className="inline-flex items-center gap-3.5 rounded-xl bg-[#e3e2e0]/10 px-5 py-1.5 text-[10px] font-bold leading-4 tracking-[1.2px] text-[#ffdf98] shadow-[0_1px_2px_rgba(0,0,0,0.05)] backdrop-blur-[6px]"
       >
-        <span aria-hidden="true" className="size-2 shrink-0 rounded-xl bg-[#fece57]" />
         {t.badge}
       </p>
 

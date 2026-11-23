@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { BrainIcon, BulbIcon, CapIcon, CubeIcon, LandmarkIcon, RocketIcon } from "@/components/ecosystem/icons";
+import { BrainIcon, BulbIcon, CapIcon, LandmarkIcon, RocketIcon } from "@/components/ecosystem/icons";
 import { useI18n } from "@/components/I18nProvider";
 
 // Figma: "Network Interactive SVG Canvas Wrapper" (993×621). The five pillars sit on a dashed
@@ -70,9 +70,6 @@ export default function NetworkMap() {
           className="absolute left-1/2 flex size-[176px] -translate-x-1/2 flex-col items-center justify-center rounded-xl bg-[#0d1c32] p-3 text-center shadow-[0_20px_25px_-5px_rgba(0,0,0,0.1),0_8px_10px_-6px_rgba(0,0,0,0.1)]"
           style={{ top: pct(CORE.y - 88, H) }}
         >
-          <span className="mb-1 flex size-10 items-center justify-center rounded-xl bg-[#fece57]/20 text-[#fece57]">
-            <CubeIcon className="size-[19px]" />
-          </span>
           <p className="font-[family-name:var(--font-alexandria)] text-[16px] font-bold leading-6 text-[#ffdf98]">{t.coreTitle}</p>
           <p className="text-[12px] leading-4 tracking-[0.48px] text-[#76849f]">{t.coreSub}</p>
           <p aria-live="polite" className="mt-1 h-[30px] max-w-[150px] text-[10.5px] leading-[15px] text-[#fece57]/90">
@@ -118,9 +115,6 @@ export default function NetworkMap() {
       {/* Phones: core card with the five pillars beneath */}
       <div className="mx-auto max-w-[480px] md:hidden">
         <div className="mx-auto flex w-[176px] flex-col items-center rounded-xl bg-[#0d1c32] p-5 text-center shadow-lg">
-          <span className="mb-1 flex size-10 items-center justify-center rounded-xl bg-[#fece57]/20 text-[#fece57]">
-            <CubeIcon className="size-[19px]" />
-          </span>
           <p className="font-[family-name:var(--font-alexandria)] text-[16px] font-bold leading-6 text-[#ffdf98]">{t.coreTitle}</p>
           <p className="text-[12px] leading-4 text-[#76849f]">{t.coreSub}</p>
         </div>
