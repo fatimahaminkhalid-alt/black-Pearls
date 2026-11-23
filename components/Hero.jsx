@@ -44,14 +44,17 @@ export default function Hero() {
         ref={videoRef}
         data-hero-video
         className="bp-hero__video"
-        src={assetPath("/hero.mp4")}
         autoPlay
         muted
         loop
         playsInline
         preload="auto"
         aria-hidden="true"
-      />
+      >
+        {/* Larger screens get the sharper copy; phones keep the lighter video. */}
+        <source src={assetPath("/hero-hd.mp4")} type="video/mp4" media="(min-width: 821px)" />
+        <source src={assetPath("/hero.mp4")} type="video/mp4" />
+      </video>
       <div className="bp-hero__shade" aria-hidden="true" />
 
       <h1 className="bp-title">
