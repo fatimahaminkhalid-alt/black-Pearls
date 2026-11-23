@@ -17,13 +17,13 @@ export function ServicesExplorer({ locale = "ar" }) {
       <div className="mx-auto max-w-[1060px]">
         <h2 className={en ? "text-[20px] font-light leading-10 tracking-[0.4em] text-[#1a1c1a]" : "text-[24px] leading-10 text-[#1a1c1a]"}>{t.heading}</h2>
 
-        {/* 3 + 2 cards, centred like the Figma pyramid. Cards sit at 60% and come forward on hover/focus. */}
+        {/* 3 + 2 cards, centred like the Figma pyramid. */}
         <ul className="mx-auto mt-12 grid max-w-[1030px] justify-center gap-6 sm:grid-cols-2 md:mt-[78px] md:flex md:flex-wrap md:gap-x-[140px] md:gap-y-[85px]">
           {t.items.map((s) => (
             <li
               key={s.title}
               tabIndex={0}
-              className="group flex min-h-[220px] flex-col items-center rounded-[15px] bg-white/10 px-4 pb-6 pt-[18px] text-center shadow-[6px_6px_20px_rgba(0,0,0,0.15)] outline-none transition-[opacity,translate,box-shadow] duration-500 ease-out focus-visible:ring-2 focus-visible:ring-[#b38600] md:size-[250px] [@media(hover:hover)]:opacity-60 [@media(hover:hover)]:hover:-translate-y-1.5 [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:hover:shadow-[6px_14px_30px_rgba(179,134,0,0.18)] [@media(hover:hover)]:focus-visible:opacity-100 motion-reduce:transition-none"
+              className="group flex min-h-[220px] flex-col items-center rounded-[15px] border border-[#1a1c1a]/10 bg-white px-4 pb-6 pt-[18px] text-center shadow-[6px_6px_20px_rgba(0,0,0,0.15)] outline-none transition-[translate,box-shadow] duration-500 ease-out focus-visible:ring-2 focus-visible:ring-[#b38600] md:size-[250px] [@media(hover:hover)]:hover:-translate-y-1.5 [@media(hover:hover)]:hover:shadow-[6px_14px_30px_rgba(179,134,0,0.18)] motion-reduce:transition-none"
             >
               <h3
                 className={`font-[family-name:var(--font-alexandria)] font-light tracking-[-0.02em] text-[#b38600] ${
@@ -60,8 +60,6 @@ function AgencePlatform({ locale }) {
       className="mx-auto mt-24 flex max-w-[1312px] flex-col-reverse items-center gap-10 overflow-hidden rounded-[32px] border border-[#b38600]/20 bg-[#071a2e] p-8 shadow-[5px_10px_15px_5px_rgba(17,24,39,0.3)] backdrop-blur-[6px] md:mt-[176px] md:p-12 lg:min-h-[460px] lg:flex-row lg:gap-16"
     >
       <div className="flex w-full flex-1 flex-col lg:min-h-[362px]">
-        <span className="self-end rounded-full border border-[#b38600]/30 px-4 py-1 text-[12px] font-bold leading-4 text-[#b38600]">{t.badge}</span>
-
         <h2 className="mt-6 leading-10 text-white md:mt-[26px]">
           <span className="font-[family-name:var(--font-alexandria)] text-[28px] md:text-[32px]">{t.name} </span>
           <span className="text-[15px] text-[#94a3b8]">{t.tagline}</span>
