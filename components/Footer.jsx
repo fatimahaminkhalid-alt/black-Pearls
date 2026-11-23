@@ -16,7 +16,7 @@ export default function Footer({ locale = "ar" }) {
     <footer className="bg-[#071a2e] px-6 pt-20 text-[#94a3b8]">
       <div className="mx-auto grid max-w-[1240px] gap-12 md:grid-cols-[1.4fr_1fr_1fr_1fr]">
         <div className="space-y-5">
-          <img src={assetPath("/logo.png")} alt={t.logoAlt} className="h-[58.08px] w-auto object-contain" />
+          <img src={assetPath(`/logo-${locale}.png`)} alt={t.logoAlt} width={88} height={88} className="size-[88px] rounded-full ring-1 ring-white/10" />
           <p className="max-w-[330px] text-[12px] leading-[1.9]">{t.about}</p>
           <p className="text-[12px]">
             <span className="font-semibold text-[#e8ca65]">{t.hqLabel}</span> {t.hq}

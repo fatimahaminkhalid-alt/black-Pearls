@@ -19,7 +19,7 @@ export default function Header({ locale = "ar" }) {
   return (
     <header className="bp-header">
       <Link href={href("/")} aria-label={t.homeAria} className="bp-logo" data-enter="logo">
-        <img src={assetPath("/logo.png")} alt={t.logoAlt} />
+        <img src={assetPath(`/logo-${locale}.png`)} alt={t.logoAlt} />
       </Link>
 
       <nav aria-label={t.menuAria} data-enter="nav">

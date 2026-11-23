@@ -37,9 +37,7 @@ export default function ServicesHero() {
         data-enter="kicker"
         className="inline-flex items-center gap-1.5 rounded-xl bg-[#e3e2e0]/20 px-5 py-1.5 text-[12px] leading-4 tracking-[0.3px] text-[#ffdf98] backdrop-blur-[6px]"
       >
-        <span aria-hidden="true" className="size-1.5 rounded-xl bg-[#fece57]" />
         {t.badge}
-        <img src={assetPath("/services/badge-icon.png")} alt="" aria-hidden="true" width={11} height={12} className="h-[11.667px] w-[10.5px]" />
       </p>
 
       <h1

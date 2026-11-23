@@ -48,7 +48,7 @@ export default function MobileMenu({ locale: localeProp = "ar" }) {
       <dialog ref={ref} data-lenis-prevent aria-label={nav.menuAria} onClose={() => window.__lenis?.start()} className="bp-menu">
         <div className="bp-menu__top">
           <Link href={localizePath(locale, "/")} aria-label={nav.homeAria} className="bp-menu__logo" onClick={close}>
-            <img src={assetPath("/logo.png")} alt={nav.logoAlt} />
+            <img src={assetPath(`/logo-${locale}.png`)} alt={nav.logoAlt} />
           </Link>
           <button type="button" onClick={close} aria-label={nav.menuClose} className="bp-menu__close">
             <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round">
