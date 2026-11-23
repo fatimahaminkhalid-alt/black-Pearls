@@ -23,17 +23,17 @@ export function ServicesExplorer({ locale = "ar" }) {
             <li
               key={s.title}
               tabIndex={0}
-              className="group flex min-h-[220px] flex-col items-center rounded-[15px] border border-[#1a1c1a]/10 bg-white px-4 pb-6 pt-[18px] text-center shadow-[6px_6px_20px_rgba(0,0,0,0.15)] outline-none transition-[translate,box-shadow] duration-500 ease-out focus-visible:ring-2 focus-visible:ring-[#b38600] md:size-[250px] [@media(hover:hover)]:hover:-translate-y-1.5 [@media(hover:hover)]:hover:shadow-[6px_14px_30px_rgba(179,134,0,0.18)] motion-reduce:transition-none"
+              className="group flex min-h-[220px] flex-col items-center rounded-[15px] border border-[#1a1c1a]/20 bg-white px-4 pb-6 pt-[18px] text-center shadow-[6px_6px_22px_rgba(0,0,0,0.2)] outline-none transition-[translate,box-shadow] duration-500 ease-out focus-visible:ring-2 focus-visible:ring-[#b38600] md:size-[250px] [@media(hover:hover)]:hover:-translate-y-1.5 [@media(hover:hover)]:hover:shadow-[6px_14px_30px_rgba(179,134,0,0.22)] motion-reduce:transition-none"
             >
               <h3
-                className={`font-[family-name:var(--font-alexandria)] font-light tracking-[-0.02em] text-[#b38600] ${
+                className={`font-[family-name:var(--font-alexandria)] font-medium tracking-[-0.02em] text-[#9e7412] ${
                   en ? "text-[24px] leading-[44px] md:text-[25px]" : "text-[28px] leading-[52px] md:text-[30px]"
                 }`}
               >
                 {s.title}
               </h3>
               <p
-                className={`font-light text-[#334155] ${
+                className={`font-normal text-[#334155] ${
                   en
                     ? "mt-4 text-[18px] leading-[30px] md:mt-[22px] md:text-[19px] md:leading-[32px]"
                     : "mt-4 text-[21px] leading-[44px] tracking-[-0.02em] md:mt-[27px] md:text-[22px] md:leading-[52px]"
